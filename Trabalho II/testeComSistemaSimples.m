@@ -46,7 +46,7 @@ n = length(a);
 somaDasMultiplicidades = 0;
 xini = 1.1;
 while (somaDasMultiplicidades < n - 1)
-  raizesB(i) = fNewtonRestos(ultimoPolinomio, xini);
+  raizesB(i) = fNewtonRestos(ultimoPolinomio, xini, 10e-6);
 
   disp(cstrcat("Reduzindo grau do polinómio ", mat2str(raizes(i).multiplicidade), " vez(es) com a raíz de valor ", mat2str(raizes(i).valor), ":"))
 

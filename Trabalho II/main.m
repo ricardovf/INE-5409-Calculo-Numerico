@@ -82,7 +82,7 @@ while (somaDasMultiplicidades < n)
 
   raizes(i) = fNewtonRestos(ultimoPolinomio, xini, 10e-6);
 
-  disp(cstrcat("Reduzindo grau do polinômio ", mat2str(raizes(i).multiplicidade), " vez(es) com a raíz de valor ", mat2str(raizes(i).valor), ":"))
+  disp(cstrcat("Reduzindo grau do polinômio ", mat2str(raizes(i).multiplicidade), " vez(es) com a raíz de valor ", mat2str(real(raizes(i).valor)), ":"))
   ultimoPolinomio = fReduzGrau(ultimoPolinomio, raizes(i).valor, raizes(i).multiplicidade);
   ultimoPolinomio = ultimoPolinomio(raizes(i).multiplicidade).polinomio;
 
@@ -95,7 +95,7 @@ fImprimeRaizes(raizes);
 disp(cstrcat("\nVerificando as ", mat2str(length(raizes)), " raízes encontradas:"));
 
 for raiz = raizes
-  disp(cstrcat("Aplicação da raíz no polinômio original: ", mat2str(fResolvePolinomio(a, raiz.valor))))
+  disp(cstrcat("Aplicação da raíz no polinômio original: ", mat2str(real(fResolvePolinomio(a, raiz.valor)))))
 end
 
 disp("\n------------------------------------------------")

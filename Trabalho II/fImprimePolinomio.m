@@ -3,7 +3,7 @@ function fImprimePolinomio(a)
   n = length(a);
 
   for i = [1:n]
-      v = mat2str(a(i));
+      v = mat2str(real(a(i)));
       if (a(i) >= 0)
         v = cstrcat("+ ", v);
       else
