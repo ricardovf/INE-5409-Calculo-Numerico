@@ -2,19 +2,17 @@ function fFatora(raizes)
   text = "P(x) = ";
 
   for raiz = raizes
+      vr = -real(raiz.valor);
       v = mat2str(-real(raiz.valor));
+      if (vr >= 1e-14)
+        v = strcat("+", v);
+      end
       m = mat2str(raiz.multiplicidade);
       v = strrep(v, "+",  "+ ");
       v = strrep(v, "-",  "- ");
 
-      % se não for zero, imprime a parcela
-      if (abs(raiz.valor) > 10e-10)
         v = cstrcat("(x ", v, ")^", m);
         text = cstrcat(text, v, " * ");
-      else
-        v = cstrcat("x^", m);
-        text = cstrcat(text, v, " * ");
-      end
   end
   text = strtrunc(text, length(text) - 2); % remove último *
   disp(text);

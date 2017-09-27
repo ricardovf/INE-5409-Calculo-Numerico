@@ -5,7 +5,7 @@ function r = fNewtonRestos(a, xini, limiteMultiplicidade)
     k = 0;
     dif = Inf;
 
-    while dif > 1e-14 && k < 100
+    while dif > 1e-14 && k < 1000
         k = k+1;
 
         R = fColetaRestos(a, xini);

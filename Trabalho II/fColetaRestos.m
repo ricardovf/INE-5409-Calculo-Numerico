@@ -7,5 +7,5 @@ function R = fColetaRestos(a, xini)
     R(i) = divisao.resto;
   end
 
-  R(n) = xini;
+  R(n) = 1;
 end
