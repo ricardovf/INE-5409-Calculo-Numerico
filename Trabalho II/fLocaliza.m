@@ -1,7 +1,7 @@
 function xini = fLocaliza(a)
   raioMax = 1 + (max(abs(a(2:length(a)))) / abs(a(1)));
 
-  aInv = flip(a);
+  aInv = a(length(a):-1:1);
   raioMin = 1 / (1 + (max(abs(aInv(2:length(aInv)))) / abs(aInv(1))));
 
   %Caso raioMin e RMax sejam iguais
